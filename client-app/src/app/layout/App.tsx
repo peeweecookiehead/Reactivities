@@ -16,7 +16,6 @@ function App() {
   useEffect(() => {
     axios.get<Activity[]>('http://localhost:5000/api/activities')
       .then(response => {
-        console.log(response);
         setActivities(response.data);
       }) 
   }, [])
